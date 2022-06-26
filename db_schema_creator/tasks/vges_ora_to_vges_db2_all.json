@@ -1,0 +1,5 @@
+[
+{"task":"1", "table": "SITE", "pk": "SITE.SITEUID", "size": "14", "full_load": "True", "start_id": "None", "limit": "None", "cleanup": "True" },
+{"task":"2", "table": "ORGANIZATION", "pk": "ORGANIZATION.ORGANIZATIONID", "size": "1", "full_load": "True", "start_id": "None", "limit": "None", "cleanup": "True" },
+{"task":"3", "table": "SETS", "pk": "SETS.SETSID", "size": "2", "full_load": "True", "start_id": "None", "limit": "None", "cleanup": "True" }
+]

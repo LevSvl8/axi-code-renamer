@@ -1,0 +1,5 @@
+cxOracle 
+ibm_db_sa
+ibm_db
+pyodbc
+sqlalchemy

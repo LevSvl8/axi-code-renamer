@@ -1,0 +1,7 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+FACONFIG;FACONFIGID;;;cleanup
+INBXCONFIG;INBXCONFIGID;;;cleanup
+KPIGCONFIG;KPIGCONFIGID;;;cleanup
+KPILCONFIG;KPILCONFIGID;;;cleanup
+PORTLETDISPLAY;PORTLETDISPLAYID;;;cleanup
+SCTEMPLATE;SCTEMPLATEID;;;cleanup

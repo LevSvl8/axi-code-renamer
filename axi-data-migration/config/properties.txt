@@ -1,0 +1,5 @@
+CONN1;localhost,5432,postgres_1,axioma,Afroamerica_2017,PG;опорный слепок для сравнения
+CONN2;"192.168.10.130",50005,maxdb76,maximo,Passw0rd,DB2;база с актуальными данными
+CONN3;localhost,5432,postgres_1,axioma,Afroamerica_2017,PG;база, в которую надо загружать данные
+FUNCS;COPYALL;функции
+TABLEFILE;AXICORE;

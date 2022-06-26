@@ -1,0 +1,7 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+ORGANIZATION;ORGID;;;cleanup
+SITE;SITEID;;;cleanup
+SITEAUTH;SITEAUTHID;;;cleanup
+SETS;SETSID;;;
+ASSET;ASSETID;;;cleanup
+LOCATIONS;LOCATIONSID;;;cleanup

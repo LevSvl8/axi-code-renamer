@@ -1,0 +1,4 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+MAXROWSTAMP;MAXROWSTAMPID;;;cleanup
+MAXSEQUENCE;MAXSEQUENCEID;;;cleanup
+AUTOKEY;AUTOKEYID;;;cleanup

@@ -1,0 +1,5 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+ACTIONSCFG;ACTIONSCFGID;;;cleanup
+LAYOUT;LAYOUTID;;;cleanup
+RSCONFIG;RSCONFIGID;;;cleanup
+SCCONFIG;SCCONFIGID;;;cleanup

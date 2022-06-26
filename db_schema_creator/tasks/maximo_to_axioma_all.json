@@ -1,0 +1,3 @@
+[
+{"task":"1", "table": "L_MAXATTRIBUTE", "pk": "L_MAXATTRIBUTE.L_MAXATTRIBUTEID", "size": "36098", "full_load": "True", "start_id": "None", "limit": "None", "cleanup": "True" }
+]

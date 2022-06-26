@@ -1,0 +1,3 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+MAXSYSKEYS;MAXSYSKEYSID;;;cleanup
+MAXSYSINDEXES;MAXSYSINDEXESID;;;cleanup

@@ -1,0 +1,6 @@
+ru.interprocom.axioma.mix.slroute.SLRouteSet;ru.interprocom.axioma.prime.mbo.custapp.CustomMboSet
+ru.interprocom.axioma.mix.slroute.SLRTravelTimeSet;ru.interprocom.axioma.prime.mbo.custapp.CustomMboSet
+ru.interprocom.axioma.mix.slroute.FldSLRLocation;
+ru.interprocom.axioma.mix.slroute.FldSLRStartDate;
+ru.interprocom.axioma.mix.slroute.FldSLREndDate;
+ru.interprocom.axioma.mix.slroute.FldSLROrgID;ru.interprocom.axioma.prime.app.site.FldOrganizationID

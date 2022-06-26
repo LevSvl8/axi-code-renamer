@@ -1,0 +1,3 @@
+objectname;uid_list;comparing_field;where_clause;cleanup
+MAXOBJECTCFG;MAXOBJECTID;;imported=1;
+MAXATTRIBUTECFG;MAXATTRIBUTEID;;OBJECTNAME IN (SELECT OBJECTNAME FROM maxobjectcfg WHERE imported=1);

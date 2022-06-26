@@ -1,0 +1,5 @@
+﻿CONN1;"192.168.10.118",5432,axi3utf,axioma,axioma,PostgreSQL;опорный слепок для сравнения
+CONN2;"192.168.10.130",50005,maxdb76,maximo,Passw0rd,DB2;база с актуальными данными
+CONN3;"192.168.10.118",5432,axi3utf,axioma,axioma,PostgreSQL;база, в которую надо загружать данные
+FUNCS;COPYALL,EXE,AXIRENAME;функции
+TABLEFILE;axicore;sp_t.csv
