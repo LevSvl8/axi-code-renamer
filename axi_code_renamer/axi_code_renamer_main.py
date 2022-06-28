@@ -15,9 +15,9 @@ def getlist(filename):
 if __name__ == '__main__':
 
     mode = 'REMOVE'
-    in_folder = r'C:\Users\EAbashina\IdeaProjects\axicorede'
-    renamed_folder = r'C:\Users\EAbashina\IdeaProjects\axicorede_maxrename'
-    trash_folder = r'C:\Users\EAbashina\IdeaProjects\axicorede_removed'
+    in_folder = r'C:\Interprocom\ideaproject\axicorede'
+    renamed_folder = r'C:\Interprocom\ideaproject\axicorede_maxrename'
+    trash_folder = r'C:\Interprocom\ideaproject\axicorede_removed'
 
     # файлы, попадающие под фильтр по имени process_files и расширению valid_suffixes копируются в папку out по
     # аналогичному относительному пути с заменой техкстовых включений по маппировке из файла max-rename.csv
@@ -38,13 +38,14 @@ if __name__ == '__main__':
     if mode == 'REMOVE':
         out_folder = trash_folder
         process_files = getlist('remove_files.csv')
-        valid_suffixes = ['.java']
-        fh = FolderHandler(in_folder, out_folder, process_files=process_files, valid_suffixes=valid_suffixes,
+        exeption_files = getlist('exeption_files.csv') # доб.
+        valid_suffixes = ['.txt','.java']
+        fh = FolderHandler(in_folder, out_folder, process_files=process_files,exeption_files=exeption_files,valid_suffixes=valid_suffixes,
                                  delete_sourcefile=True)
 
         fh.simple_replace()
 
-    # Все файлы, попадающие в папку "Корзина" с расширением valid_suffixes
+    #TODO Все файлы, попадающие в папку "Корзина" с расширением valid_suffixes
     # переносятся в исходную папку по аналогичному относительному пути
     if mode == 'RESTORE':
         pass

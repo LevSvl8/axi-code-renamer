@@ -7,13 +7,15 @@ import os
 
 class FolderHandler:
     def __init__(self, in_folder, out_folder, rename=False, valid_suffixes:list=None, process_files:list=None,
-                       delete_sourcefile=False, target='CODE'):
+                       exeption_files:list = None,delete_sourcefile=False, target='CODE'):
         self.renamer = Renamer(target=target)
         self.root_folder = in_folder
         self.root_out_folder = out_folder
         self.valid_suffixes = valid_suffixes
         self.process_files = process_files
+        self.exeption_files = exeption_files # доб
         self.delete_sourcefile = delete_sourcefile
+        self.do_rename = rename
         if rename:
             if delete_sourcefile:
                 print('Rename & remove mode')
@@ -31,11 +33,13 @@ class FolderHandler:
     def make_renamed_dir(self, current_folder):
         relative_path = Path(current_folder).relative_to(self.root_folder)
         relative_path_str = str(relative_path)
-        for row in code_rename_map:
-            relative_path_str = re.sub(row[0], row[1], relative_path_str)
-        relative_path_str = relative_path_str.replace('\\', '/')
-        for row in pkg_map_for_folders:
-            relative_path_str = re.sub(row[0], row[1], relative_path_str)
+        if self.do_rename:
+            for row in code_rename_map:
+                relative_path_str = re.sub(row[0], row[1], relative_path_str)
+            relative_path_str = relative_path_str.replace('\\', '/')
+            for row in pkg_map_for_folders:
+                relative_path_str = re.sub(row[0], row[1], relative_path_str)
+
         os.path.normpath(relative_path_str)
         out_path = os.path.join(self.root_out_folder, relative_path_str)
         if not os.path.exists(out_path):
@@ -45,10 +49,12 @@ class FolderHandler:
     def need_to_process_file(self, file_fullname):
         if self.valid_suffixes and os.path.splitext(file_fullname)[1] not in self.valid_suffixes:
             return False
-
+        if os.path.basename(file_fullname) in self.exeption_files: # доб
+            return False
         if not self.process_files:
             return True
         b = False
+        print(os.path.splitext(file_fullname)[0])
         for process_file in self.process_files:
             try:
                 file_fullname.index(process_file)
@@ -72,10 +78,11 @@ class FolderHandler:
                     new_filename = str(file)
 
                     #Переименование файла
-                    new_filename = self.renamer.get_axi_val(new_filename)
+                    if self.do_rename:
+                        new_filename = self.renamer.get_axi_val(new_filename)
 
-                    # Переименование других вхождений в тексте кода
-                    data = self.renamer.get_axi_val(data, content_type='code')
+                        # Переименование других вхождений в тексте кода
+                        data = self.renamer.get_axi_val(data, content_type='code')
 
                     # Создание переименованной директории
                     out_folder = self.make_renamed_dir(current_folder)
